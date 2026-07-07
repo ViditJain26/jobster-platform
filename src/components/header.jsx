@@ -8,7 +8,7 @@ import {
   useUser,
 } from "@clerk/clerk-react";
 import { Button } from "./ui/button";
-import { BriefcaseBusiness, Heart, PenBox } from "lucide-react";
+import { BriefcaseBusiness, Heart, PenBox, FolderCode } from "lucide-react";
 
 const Header = () => {
   const [showSignIn, setShowSignIn] = useState(false);
@@ -33,16 +33,29 @@ const Header = () => {
     <>
       <nav className="py-4 flex justify-between items-center">
         <Link to="/">
-          {/* Changed alt text to Jobster Logo */}
           <img src="/logo.png" className="h-20" alt="Jobster Logo" />
         </Link>
 
-        <div className="flex gap-8">
+        <div className="flex gap-8 items-center">
+          {/* View Source Code Action Button */}
+          <Button variant="outline" asChild>
+            <a
+              href="https://github.com/ViditJain26/jobster-platform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2"
+            >
+              <FolderCode size={18} />
+              <span>Source Code</span>
+            </a>
+          </Button>
+
           <SignedOut>
             <Button variant="outline" onClick={() => setShowSignIn(true)}>
               Login
             </Button>
           </SignedOut>
+
           <SignedIn>
             {user?.unsafeMetadata?.role === "recruiter" && (
               <Link to="/post-job">
