@@ -8,7 +8,7 @@ Designed for high performance and scalability, the application leverages a compl
 
 ## 🔗 Deployments & Links
 
-- **Live Production Site:** [Launch Jobster App](https://jobster-gold.vercel.app)
+- **Live Production Site:** <a href="https://jobster-gold.vercel.app" target="_blank" rel="noopener noreferrer">Launch Jobster App</a>
 - **Backend Provider:** Supabase (PostgreSQL)
 - **Auth System Engine:** Clerk Auth Core
 
@@ -42,6 +42,6 @@ _(Note: This repository is fully configured, dependency-initialized, and activel
 ### 1. Repository Cloning
 
 ```bash
-git clone [https://github.com/ViditJain26/Jobster.git](https://github.com/ViditJain26/Jobster.git)
-cd Jobster
+git clone [https://github.com/ViditJain26/jobster-platform.git](https://github.com/ViditJain26/jobster-platform.git)
+cd jobster-platform
 ```
